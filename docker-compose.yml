@@ -1,0 +1,32 @@
+services:
+  db:
+    image: postgres:14-alpine
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  web:
+    build: .
+    volumes:
+      - .:/usr/src/sample-rails-app
+      - bundle:/usr/local/bundle
+    ports:
+      - "80:3000"
+    environment:
+      RAILS_ENV: "development"
+      DATABASE_HOST: "db"
+      DATABASE_USER: "postgres"
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    depends_on:
+      - db
+    tty: true
+    entrypoint: []
+    stdin_open: true
+    command: bash -lc "rm -f tmp/pids/server.pid && exec bin/rails s -b 0.0.0.0 -p 3000"
+
+volumes:
+  postgres-data:
+  bundle:
