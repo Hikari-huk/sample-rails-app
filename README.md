@@ -22,6 +22,7 @@ ARG APP_ROOT='/usr/src/sample-rails-app'
 
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install -y nodejs
 RUN apt-get install -y vim
+RUN npm install -g yarn
 
 WORKDIR $APP_ROOT
 
