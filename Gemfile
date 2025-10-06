@@ -64,3 +64,5 @@ end
 
 
 gem "cssbundling-rails"
+
+gem "rails-controller-testing"
