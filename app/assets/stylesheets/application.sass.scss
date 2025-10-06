@@ -1,6 +1,5 @@
-// Entry point for your Sass build
-@use "bootstrap/scss/bootstrap" as *;
-@import "bootstrap-icons/font/bootstrap-icons.css";
+@use "bootstrap/scss/bootstrap";
+
 /* universal */
 
 body {
@@ -22,7 +21,6 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
-
 /* typography */
 
 h1,
@@ -53,20 +51,4 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-}
-
-#logo:hover {
-  color: #777;
-  text-decoration: none;
 }
