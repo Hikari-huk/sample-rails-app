@@ -4,18 +4,18 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "sass": "^1.93.2"
-  },
-  "scripts": {
-    "build:css:compile": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "build:css:prefix": "postcss ./app/assets/builds/application.css --use autoprefixer -o ./app/assets/builds/application.css",
-    "build:css": "yarn build:css:compile && yarn build:css:prefix",
-    "watch:css": "nodemon --watch ./app/assets/stylesheets/ --ext scss --exec \"yarn build:css\""
+    "sass": "^1.93.2",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "autoprefixer": "^10.4.21"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "nodemon": "^3.1.10",
-    "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1"
+    "nodemon": "^3.1.10"
+  },
+  "scripts": {
+    "build:css:compile": "npx sass app/assets/stylesheets/application.scss:app/assets/builds/application.css --no-source-map --load-path=node_modules",
+    "build:css:prefix": "npx postcss app/assets/builds/application.css --use autoprefixer -o app/assets/builds/application.css",
+    "build:css": "npm run build:css:compile && npm run build:css:prefix",
+    "watch:css": "npx nodemon --watch app/assets/stylesheets --ext scss --exec \"npm run build:css\""
   }
 }
