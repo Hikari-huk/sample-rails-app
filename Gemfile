@@ -66,3 +66,5 @@ end
 gem "cssbundling-rails"
 
 gem "rails-controller-testing"
+
+gem "bcrypt"
