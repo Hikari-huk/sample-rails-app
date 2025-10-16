@@ -185,26 +185,14 @@ textarea {
   @include box_sizing;
 }
 
-input {
-  height: auto !important;
-}
+// input {
+//   height: auto !important;
+// }
 
 #error_explanation {
   color: red;
   ul {
     color: inherit;
     margin: 0 0 30px 0;
-  }
-}
-
-/* Rails はエラーのある項目を .field_with_errors でラップする */
-.field_with_errors {
-  .form-control {
-    border-color: var(--bs-danger);
-  }
-  .form-control:focus {
-    border-color: var(--bs-danger);
-    /* フォーカス時の赤いアウトライン（Bootstrap 5 っぽい見た目） */
-    box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
   }
 }
