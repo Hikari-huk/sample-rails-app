@@ -68,3 +68,7 @@ gem "cssbundling-rails"
 gem "rails-controller-testing"
 
 gem "bcrypt"
+
+gem "faker", "~> 2.19"
+
+gem "will_paginate", "~> 3.3.0"
