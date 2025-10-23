@@ -72,3 +72,7 @@ gem "bcrypt"
 gem "faker", "~> 2.19"
 
 gem "will_paginate", "~> 3.3.0"
+
+gem "active_storage_validations", "~> 0.9.5"
+
+gem "image_processing", "~> 1.2"
